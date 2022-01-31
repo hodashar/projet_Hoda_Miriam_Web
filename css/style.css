@@ -1,0 +1,651 @@
+
+/* Start regles globales */
+* {
+  -webkit-box-sizing: border-box; /*Specifie comment la largeur et la hauteur de l'element sont calcules*/
+  -moz-box-sizing: border-box; /*utilise pour modifier le modele de boite CSS par defaut utilise pour calculer les largeurs et les hauteurs des elements*/
+  box-sizing: border-box;
+}
+html {/*--------- animer en douceur la position de defilement des page  ------*/
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* pour Small ecran reponsive */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* pour Medium ecran reponsive */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* pour Large ecran reponsive */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End regles globales */
+
+
+
+/* Start texte en gris claire */
+.special-heading {
+  color: #b9bbbb;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End texte en gris claire */
+
+
+/* Start Header */
+.header {
+  padding: 14px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 100px;
+}
+
+.header .panierIcon{
+  position: relative;
+  padding-left: 30px;
+}
+
+.header .search-container {
+  position: relative;
+}
+     /* start faire la liste avec les trois lignes */
+.header .links {
+  position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.5s; /*pour que le 2em ligne soit plus long apres je declarer la duree dans les variables top*/
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+    /* end faire la liste avec les trois lignes */
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.5s;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* End Header */
+
+
+/* Start Landing Section */
+.landing {
+  background-image: url(../images/cool.jpg);
+  background-size:cover;
+  background-position:35%;
+  height: calc(97vh - 64px);
+  position: relative;
+}
+.landing .intro-text {
+  position: absolute;
+  left: 70%;
+  top: 250px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+}
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color:#59c3ec;
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+  .intro-text {
+    padding-right: 120px;
+    padding-top: 190px;
+  }
+  .landing .intro-text h1 {  
+    font-size: 25px;
+    color:#000000;
+  }
+  .landing .intro-text p {
+    font-size: 12px;  
+  }
+}
+
+/* End Landing Section */
+
+
+/* Start shop */
+.shop {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: rgb(250 242 250);
+}
+.shop .shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 320px;
+  margin-top: 80px;
+}
+.shop .shop-content .card {
+  background-color: rgb(53, 53, 53);
+}
+.shop .shop-content .card img {
+  max-width: 100%;
+}
+.shop .shop-content .card .info {
+  padding: 20px;
+}
+.shop .shop-content .card .info h3 {
+  text-align: center;
+  color: aliceblue;
+}
+
+/* End shop */
+
+/* Start About */
+.about {
+  padding-top: 60px;
+  padding-bottom: calc(60px + 60px);
+}
+.about .about-content {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.about .about-content .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+@media (max-width: 991px) {
+  .about .about-content .image {
+    margin: 0 auto 60px;
+  }
+}
+.about .about-content .image::before {
+  content: "";
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.about .about-content .image::after {
+  top: -40px;
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  border-left: 80px solid #10cab7;
+  border-bottom: 80px solid #10cab7;
+  z-index: -1;
+  right: -150px;
+}
+@media (max-width: 991px) {
+  .about .about-content .image::before,
+  .about .about-content .image::after {
+    display: none;
+  }
+}
+.about .about-content .image img {
+  max-width: 100%;
+}
+.about .about-content .text {
+  flex-basis: calc(100% - 500px);
+}
+.about .about-content .text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.about .about-content .text hr {
+  width: 50%;
+  display: inline-block;
+  border-color: #10cab7;
+}
+.about .about-content .text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+/* End About */
+
+/* Start Contact */
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+.contact .info {
+  padding-top:60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.contact .info .label {
+  font-size: 35px;
+  font-weight: 800;
+  color: #2c4755;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+/* End Contact */
+
+/* Start Footer */
+.footer {
+  background-color: #2c4755;
+  padding: 33px 10px;
+  
+}
+.footer .socialIcon{
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+}
+/* End Footer */
+
+/* Start page liste produit*/
+.product-list {
+  background-color: #f6f6f6;
+  padding: 1em;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.product-list .cards-item {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.cards-item .card {
+  display:flex;
+  background-color: rgba(196, 193, 193, 0.986);
+  box-shadow: 0px 5px 2.5px rgb(204, 196, 196);
+  border-style: solid;
+  border-color: rgba(196, 193, 193, 0.986) ;
+  border-width: 5px;
+  border-radius: 5px;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cards-item:hover{
+  transform: scale(1.05);
+}
+.card img {
+  max-width:270px;
+  height: 510px;
+  border-radius: 5px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.card-content {
+  padding: 1rem;
+ 
+}
+
+.card .text {
+  text-align: center;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+  
+}
+
+.details-button {
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.details-button:hover {
+  box-shadow: 0px 5px 5px rgb(245, 235, 191);
+
+}
+
+@media (min-width: 767px) {
+  .cards-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 991px) {
+  .cards-item {
+    width: 33.3333%;
+  }
+}
+/* End page liste produit */
+
+/* Start page produit détails */
+.produit {
+  padding-bottom: calc(60px + 60px);
+}
+.produit .produit-content {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .produit .produit-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.produit .produit-content .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+@media (max-width: 991px) {
+  .produit .produit-content .image {
+    margin: 0 auto 60px;
+  }
+}
+.produit .produit-content .image::before {
+  content: "";
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.produit .produit-content .image::after {
+  top: -40px;
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  border-left: 80px solid #10cab7;
+  border-bottom: 80px solid #10cab7;
+  z-index: -1;
+  right: -150px;
+}
+@media (max-width: 991px) {
+  .produit .produit-content .image::before,
+  .produit .produit-content .image::after {
+    display: none;
+  }
+}
+.produit .produit-content .image img {
+  max-width: 100%;
+}
+.produit .produit-content .text {
+  flex-basis: calc(100% - 500px);
+}
+.produit .produit-content .text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.produit .produit-content .text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+
+/* End page produit details */
+
+
+/* start page panier*/
+.panier {
+  background-color: #ebeced;
+}
+
+.cart-page{
+  margin-left:  50px   ;
+  margin-right: 50px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th{
+  text-align: left;
+  padding: 5px;
+  color: #d4d4d4;
+  background: rgb(145, 145, 145);
+  font-weight: normal;
+}
+.cart-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+td{
+  padding: 10px 5px ;
+}
+td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px ;
+}
+td a{
+  color: rgb(104, 102, 102);
+  font-size: 12px;
+}
+td img {
+  width: 100px;
+  height: 100px ;
+  margin: 10px;
+}
+
+.total-price{
+  display: flex;
+  justify-content: flex-end;
+}
+.total-price table{
+  border-top: 3px solid grey;
+  width:100% ;
+  max-width: 350px ;
+}
+
+td:last-child{
+  text-align:right ;
+}
+th:last-child{
+  text-align: right;
+}
+
+
+.cart-page-button {
+  background-color: #c2c1c1;
+  border: none;
+  font-size: 14px;
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+.cart-page-button:hover {
+  box-shadow: 0px 5px 5px rgb(116, 115, 114);
+
+}
+
+
+@media only screen and (max-width: 600px){
+  table  {
+   max-width: 100%;
+  }
+}
+
+
+
+/* End page panier*/
+
+
+/* Start page merci */
+
+.achats {
+  background-image: url(../images/merci.jpg); 
+  background-size: cover;
+  height: calc(90vh - 60px);
+  position: relative;
+}
+
+.achats .container h2{
+  font-size: 45px;
+  padding-top: 40px;
+}
+
+.achats p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 20pt;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-weight: 900;
+  color: rgb(247, 240, 236);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.achats form{
+  
+  text-align: center;
+}
+.merci-button {
+  margin-top: 25px;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgb(255, 253, 250);
+  background-color: rgba(250, 235, 215, 0.068);
+  cursor: pointer; 
+}
+.merci-button:hover {
+  box-shadow: 0px 2px 2px rgb(116, 115, 114);
+}
+@media(max-width:797px){
+  .special-heading{
+    padding-top: 40px;
+    font-size: 40px;
+  }
+  .achats p {
+    font-size: 15px;
+  }
+  .merci-button{
+    font-size: 13px;
+  }
+}
+/* End page merci */
+
+/* Start page Details techniques */
+
+/* Start page Details techniques */
+.detailTech {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: rgb(250 242 250);
+}
+.techniques {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.techniques img {
+  max-width: 100%;
+}
+/* End page Details techniques */
+

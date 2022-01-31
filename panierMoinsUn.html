@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> M&H Fashion-Panier </title>
+    <!--  CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Render normal les Elements  -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   <!-- Start Header -->
+   <div class="header">
+    <div class="container">
+      <a href="index.html"> <img class="logo" src="images/logo.jpg" alt="logo mh" /> </a> 
+      <div class="search-container">
+          <input type="text" placeholder="Search.." name="search">
+          <a href="Liste.html"><i class="fa fa-search"></i></a>    
+          <a class="panierIcon" href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+      </div> 
+      
+      <div class="links">     
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="panier.html">Panier</a></li>
+          <li><a href="index.html#about">À propos</a></li>
+          <li><a href="DétailsTechniques.html">Détails Techniques</a></li>
+          <li><a href="index.html#contact">Contacts</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- End Header -->
+
+
+    <!--start panier-->
+    <div class="panier" id="panier">
+      <div class="container"></div>
+      <h2 class="special-heading">Panier</h2>
+      <p>...Vous y êtes presque !</p>
+        <div class="small-container cart-page">
+            <table>
+              <tr>
+                <th>Produits</th>
+                <th>Qte</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cart-info">
+                    <img src="images/liste/image2.jpg" alt="Jupe rainbow en viscose">
+                    <div>
+                      <a href="produit.html"><p>Jupe rainbow en viscose</p></a>
+                      <small>25,99 €</small>
+                      <br>
+                      <br>
+                      <a href="panierMoinsUn.html">supprimer  <i class="far fa-minus-square"></i></a>
+                    </div>
+                  </div>  
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>25,99 €</td>
+              </tr>
+
+              
+            </table>
+
+            <div class="total-price">
+              <table>
+                <tr>
+                  <td>Prix total : </td>
+                  <td>25,99 €</td>
+                </tr> 
+                <tr>
+                  <td>
+                    <form action="merci.html">
+                      <button class="cart-page-button"> Confirmer</button>
+                    </form>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <form action="Liste.html">
+                      <button class="cart-page-button"> Continuer les achats</button>
+                    </form>
+                  </td>
+                  <td></td>
+                </tr>
+               
+              </table>
+            </div>
+
+        </div> 
+   </div>
+    
+     
+        <!--end panier-->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="socialIcon">
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+    <!-- End Footer -->
+  </body>
+</html>

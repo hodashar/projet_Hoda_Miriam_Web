@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+ 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> M&H Fashion-Détails Techniques </title>
+    <!--  CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Render normal les Elements  -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="container"> 
+        <a href="index.html"> <img class="logo" src="images/logo.jpg" alt="logo mh" /> </a> 
+        <div class="search-container">
+            <input type="text" placeholder="Search.." name="search">
+            <a href="Liste.html"><i class="fa fa-search"></i></a>    
+            <a class="panierIcon" href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+        </div> 
+        
+        <div class="links">     
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="DétailsTechniques.html">Détails Techniques</a></li>
+            <li><a href="index.html#contact">Contacts</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <main class="detailTech" id="detailTech">
+        <div class="container">
+          <h1 class="special-heading">Détails techniques</h1>
+          <section class="techniques">
+            <h2> Méthodes</h2>
+                <!-- Premiere partie + image maquette -->
+                
+                
+                <p>Pour ce projet de création d’un site web nous avons choisi de réaliser un site pour un magasin de vêtements. </p>
+                <p>Nous avons d'abord analysé les contraintes du projet en faisant un premier plan. 
+                    Ensuite, des recherches sur Internet ont été faites pour s'inspirer aux idées récentes. 
+                    Ayant collecté suffisamment d’éléments, nous avons fait notre maquette sur PowerPoint 
+                    avec les pages pricipales et la palette de couleurs à utiliser. </p>
+                    <figure>
+                      <img id="maquette" src="images/essaiWeb.jpg" alt="maquette du site web">
+                      <figcaption><small> Maquette répresentante les six pages principales et la palette de couleurs. </small></figcaption>
+                    </figure>
+                    <br>
+                    <p>Le travail a été du coup repartis et nous avons aussi établi des jalons pour discuter de l’avancement. </p>
+                    <p>Pour la réalisation nous avons suivi l’ordre classique de consultation d’un site, en partant par la page d’accueil 
+                    et terminant par la page de confirmation d’achat. Nous avons fait attention de les rendre responsive en ajoutant un fichier CSS dédié, 
+                    (normalize.css) plus autres éléments dans le fichier style.css, 
+                    de tester les pages et au fur et à mesure les valider avec le service de validation du W3C.</p>
+                    <p>Pour bien se repérer et faciliter la compréhension, 
+                    nous avons ajouté des commentaires dans le code en spécifiant la section de page en question et
+                    on a également essayé de bien indenter le code. </p>
+                
+
+                <!-- Seconde partie: outils -->
+                <article class="outils">
+                <h2>Outils</h2>
+                <p>Le site web w3schools.com et les supports reçus au cours ont été régulièrement consultés en cas de doutes, 
+                    ou bien pour amplier nos connaissances sur les plusieurs fonctionnalités et éléments de CSS et HTML. 
+                </p>
+                <p>Pour les icones et les fonts nous avons utilisé le site <em>fontawesome.com</em>, <em>googleapis.com</em> et <em>gstatics.com</em> 
+                    en ajoutant les liens aux fichiers HTML. 
+                </p>
+                <p>Les images ont été prises sur des sites qui proposent des images sans copyright, comme <em>unsplash.com</em>. </p>
+                <p>Le logo a été idée et realisé à l’aide de Photoshop.</p>
+                <p>Le menu est une liste, animée par des hover. Nous avons utilisé l’hover aussi pour les cards 
+                    de la liste des produit, l’entrée du shop et les boutons.
+                </p>
+                <p>Les grilles et tables se sont révélées très utiles pour la subdivision des pages et l’orientation des items. </p>
+                <p>Le bouton sur la page de confirmation d’achats 
+                    qui amène vers la liste de produits a été defini avec une opacité partiale et donc inferieur à 1 du rgba pour mieux s’accorder 
+                    avec l’image de background. 
+                </p>
+                
+                <p>Pour ultérieurs informations, n’hésitez pas à nous contacter par les adresses e-mail présentes à la voix <a href="index.html#contact">“Contacts”</a>. </p>
+                
+                <p>Bonne navigation, 
+                    <br><br>
+                    Hoda AL SHAAR <br>
+                    Miriam INCORVAIA 
+                    </p> 
+                </article>
+            </section>
+        </div>
+    </main>        
+        
+
+  
+
+<!-- Start Footer -->
+<div class="footer">
+    <div class="socialIcon">
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      </div>
+  </div>
+  <!-- End Footer -->
+</body>
+</html>

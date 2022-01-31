@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> M&H Fashion-Jupe rainbow en viscose</title>
+    <!--  CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Render normal les Elements  -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <!-- Start Header -->
+     <div class="header">
+      <div class="container">
+        <a href="index.html"> <img class="logo" src="images/logo.jpg" alt="logo mh" /> </a> 
+        <div class="search-container">
+            <input type="text" placeholder="Search.." name="search">
+            <a href="Liste.html"><i class="fa fa-search"></i></a>    
+            <a class="panierIcon" href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+        </div> 
+        
+        <div class="links">     
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="DétailsTechniques.html">Détails Techniques</a></li>
+            <li><a href="index.html#contact">Contacts</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!--start produit-->     
+        <div class="produit">
+          <div class="container">
+                  
+            <div class="produit-content">
+              <div class="image">
+                <img src="images/liste/image2.jpg" alt="Jupe rainbow en viscose" />
+              </div>
+              <div class="text">
+                <div>
+                  <h1>Jupe rainbow en viscose</h1>
+                <div class="stars">  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <small>avis</small> </div>
+                  <p>Jupe multicouleur en viscose, parfaite pour une tiède journée d'été mais aussi pour un pic-nic printanier.</p>
+                  <h3>Composition</h3>
+                  <p>59% viscose, 40% coton, 1% acrilique</p>
+                                    
+                  <select name="taille" id="taille">
+                    <option value="">Taille</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>           
+                  <br>
+                  <h4>Prix: 25,99 €</h4>
+                  <form action="panier.html">
+                    <button class="cart-page-button"> Ajouter au panier </button>
+                  </form> 
+                  <br>
+                  <form action="Liste.html">
+                    <button class="cart-page-button"> Retourner à la liste </button>
+                  </form>                  
+                </div>       
+              </div>
+            </div>
+          </div>
+        </div>
+    <!--end produit-->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="socialIcon">
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+    <!-- End Footer -->
+  </body>
+</html>
